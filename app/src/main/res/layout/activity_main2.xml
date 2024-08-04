@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    tools:ignore="ExtraText">
+
+  <LinearLayout
+      android:id="@+id/linearLayout_1"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:orientation="vertical"
+      android:padding="16dp"
+      android:background="#121212"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+
+      <FrameLayout
+          android:id="@+id/container_card"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:background="@drawable/bottom_round_container">
+
+
+          <TextView
+              android:id="@+id/text_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:text="Your profile Name"
+              android:textColor="@android:color/white"
+              android:textSize="20sp"
+              tools:ignore="HardcodedText"
+            />
+      </FrameLayout>
+
+
+      <LinearLayout
+          android:id="@+id/linearLayout_h"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="@id/linearLayout_1"
+          android:gravity="center">
+
+          <Button
+              android:id="@+id/button1"
+              android:layout_width="120dp"
+              android:layout_height="52dp"
+              android:layout_weight="1"
+              android:text="Serengeti"
+              android:textStyle="bold"
+              android:textColor="#425017"
+              android:textSize="12sp"
+              app:cornerRadius="12dp"
+              android:backgroundTint="#eaf5a0"
+              android:layout_marginEnd="8dp"
+          tools:ignore="HardcodedText" />
+
+          <Button
+              android:id="@+id/button2"
+              android:layout_width="120dp"
+              android:layout_height="50dp"
+              android:layout_weight="2"
+              android:backgroundTint="#121212"
+              android:textStyle="bold"
+              android:text="Ngorongoro"
+              app:cornerRadius="12dp"
+              android:textSize="12sp"
+              android:layout_marginEnd="8dp"
+              tools:ignore="HardcodedText"
+              android:textColor="#eaf5a0"
+              app:strokeColor="#eaf5a0"
+              app:strokeWidth="1dp"
+              />
+
+          <Button
+              android:id="@+id/button3"
+              android:layout_width="120dp"
+              android:layout_height="50dp"
+              android:text="Mikumi"
+              android:textStyle="bold"
+              app:cornerRadius="12dp"
+              android:textSize="12sp"
+              android:layout_weight="1"
+              tools:ignore="HardcodedText"
+              android:backgroundTint="#121212"
+              android:textColor="#eaf5a0"
+              app:strokeColor="#eaf5a0"
+              app:strokeWidth="1dp"/>
+      </LinearLayout>
+
+      <LinearLayout
+
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="@id/linearLayout_h"
+          >
+
+          <androidx.fragment.app.FragmentContainerView
+              android:id="@+id/fragmentContainerView"
+              android:name="com.example.demo_app.fragment1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:layout="@layout/fragment_fragment1" />
+
+      </LinearLayout>
+
+
+  </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
