@@ -64,6 +64,17 @@
             android:textColorHint="#888888"
             android:layout_marginBottom="8dp"
             tools:ignore="HardcodedText,TextFields" />
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your full name!"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_gravity="end"
+            android:layout_marginBottom="32dp"
+            tools:ignore="HardcodedText,TextFields"
+            />
 
 
         <Button
@@ -76,7 +87,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="#425017"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             tools:ignore="HardcodedText" />
 
 

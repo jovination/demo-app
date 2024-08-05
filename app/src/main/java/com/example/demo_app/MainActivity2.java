@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 
 public class MainActivity2 extends AppCompatActivity {
-
+      TextView txtview;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -23,6 +24,16 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
+        txtview = findViewById(R.id.text_view);
+        Intent i = getIntent();
+        String first_name, second_name;
+        first_name = i.getStringExtra("firstName");
+        second_name =i.getStringExtra("secondName");
+
+        StringBuilder fullName;
+        fullName = new StringBuilder();
+        fullName.append(first_name).append(" ").append(second_name);
+        txtview.setText(fullName.toString());
 
 
         Button btn1 = findViewById(R.id.button1);
